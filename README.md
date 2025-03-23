@@ -69,7 +69,68 @@ FROM
 
 ```
 
+OUTPUT : 
+
 ![image](https://github.com/user-attachments/assets/ee45f997-d3be-4b7a-800b-e3034ee0acbe)
+
+
+# 2.Percentage of Sales From Each Location 
+
+**MYSQL QUERY**
+
+
+```sql 
+
+
+WITH cte1 AS (
+    SELECT order_location, SUM(Total_sales) AS tsal
+    FROM merch
+    GROUP BY order_location
+),
+cte2 AS (
+    SELECT SUM(Total_sales) AS tsal1
+    FROM merch
+)
+SELECT 
+    cte1.order_location,
+    (cte1.tsal * 100.0) / cte2.tsal1 AS percentage_sales
+FROM 
+    cte1, cte2;
+
+```
+
+OUTPUT :
+
+![image](https://github.com/user-attachments/assets/6eca5dad-2154-4d8d-9188-e5eba7e10efa)
+
+
+
+
+# 3. SALES BY MONTH 
+
+**MYSQL QUERY**
+
+
+```sql 
+
+SELECT 
+    order_location,
+    DATE_FORMAT(STR_TO_DATE(order_date, '%Y-%m-%d'), '%Y') AS sales_month,
+    SUM(Total_sales) AS monthly_sales
+FROM merch
+GROUP BY order_location, sales_month
+ORDER BY order_location, sales_month;
+
+```
+
+OUTPUT :
+
+
+
+
+
+
+
 
 
 
