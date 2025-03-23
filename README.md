@@ -131,6 +131,24 @@ OUTPUT :
 
 
 
+# 4. WHICH PRODUCT CATEGORY PERFORM THE BEST
+
+
+**MYSQL QUERIES**
+
+```sql 
+
+select product_category,sum(Total_sales) as saling_amount
+ from merch
+ group by 1
+ order by sum(Total_sales) desc;
+
+```
+
+OUTPUT :
+
+![PRODUCT CATEGORY PERFORM THE BEST](https://miro.medium.com/v2/resize:fit:562/format:webp/1*-RDezWoGpmHsuO5zc9TJ7Q.png)
+
 
 
 
