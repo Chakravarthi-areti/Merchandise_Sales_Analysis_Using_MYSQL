@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/624bba2f-1b27-4392-bdeb-354aae5331c8)# Merchandise_Sales_Analysis_Using_MYSQL
 
 
 # MERCHANDISE SALES ANALYSIS 
@@ -31,6 +30,63 @@ Lee Chatmen is a popular influencer from the United States with over 7 million S
 | **Total_Sales**          | Total sales value for the order |
 | **Rating**               | Customer rating for the product |
 | **Review**               | Customer review or feedback |
+
+
+
+
+
+
+
+
+
+# Lets's Start Our Analysis 
+
+
+# 1.Percentage OF Male and Female Users in Customers
+
+**MYSQL QUERY**
+
+```sql
+
+WITH male_sales AS (
+    SELECT SUM(Total_Sales) AS tsalM
+    FROM merch
+    WHERE buyer_gender = 'Male'
+),
+female_sales AS (
+    SELECT SUM(Total_Sales) AS tsalF
+    FROM merch
+    WHERE buyer_gender = 'Female'
+)
+SELECT 
+    (fs.tsalF * 100.0) / (ms.tsalM + fs.tsalF) AS female_perce,
+    (ms.tsalM * 100) / (ms.tsalM + fs.tsalF) as male_perce
+    
+FROM 
+    
+    female_sales fs,
+    male_sales ms;
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
