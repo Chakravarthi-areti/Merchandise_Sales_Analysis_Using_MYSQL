@@ -126,6 +126,9 @@ ORDER BY order_location, sales_month;
 
 OUTPUT :
 
+![image](https://miro.medium.com/v2/resize:fit:462/format:webp/1*VINUCedKJLU8ZUas0wokyg.png)
+
+
 
 
 
