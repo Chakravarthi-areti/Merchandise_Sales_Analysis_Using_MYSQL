@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/56a53dfe-dcff-499b-aaa2-cc325f090823)
 
 
 # MERCHANDISE SALES ANALYSIS 
