@@ -253,6 +253,11 @@ OUTPUT :
 •Make sure that international Shipping to be included for all the areas.
 
 
+## click on the below image for the project presentation 
+
+[![Click the image for Project Presentation](https://github.com/Chakravarthi-areti/Merchandise_Sales_Analysis_Using_MYSQL/blob/main/Merchandise_sales_pre_scrnsht.png)](https://www.linkedin.com/feed/update/urn:li:activity:7302173540353552384/)
+
+
 
 
 
